@@ -72,12 +72,32 @@ def uploadSometing(request):
 
     return Response({'text':'upload success'})
 
+
+from uploadpic.models import Job_upload, Sub_equipment
+
 @api_view(['GET'])
 @permission_classes((AllowAny,))
 def readSomething(request):
     # read model
+    jobs = Job_upload.objects.all()
+    result=[]
 
-    return Response({'data':'text'})
+    for job in jobs:
+        print(job.__dict__)
+        subEquipment=Sub_equipment.objects.get(id = job.subeq_name_id)
+        print(subEquipment.__dict__)
+        equipment = Equipment.objects.get(id=subEquipment.eq_name_id)
+        print(equipment.__dict__)
+        result.append({'jobId':job.id,'equipment':equipment.Eq_name, 
+            'subEquipment':subEquipment.Subeq_name})
+    
+
+
+
+
+    
+    return Response({'data':result})
+    
 
 
 
