@@ -17,7 +17,7 @@ function testfunction(){
         },
         body: JSON.stringify(send_data),
     }
-    fetch('/uploadpic/voltage/',option)
+    fetch('/uploadpic/uploadSomething/',option)
     .then((resp) => {
         
         return resp.json();

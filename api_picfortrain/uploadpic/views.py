@@ -63,3 +63,25 @@ def reqresjson(request):
     
 def mypostapi(request):
     return render(request,"uploadpic/mypostapi.html")
+
+
+@api_view(['POST'])
+@permission_classes((AllowAny,))
+def uploadSometing(request):
+    # save model
+
+    return Response({'text':'upload success'})
+
+@api_view(['GET'])
+@permission_classes((AllowAny,))
+def readSomething(request):
+    # read model
+
+    return Response({'data':'text'})
+
+
+
+
+
+
+

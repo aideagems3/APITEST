@@ -29,4 +29,9 @@ urlpatterns = [
     path('reqresjson/', views.reqresjson,name='reqresjson'),
     path('mypostapi/', views.mypostapi,name='mypostapi'),
     
+    path('uploadSomething/', views.uploadSometing,name='uploadSometing'),
+    path('readSomething/', views.readSomething,name='readSomething'),
+
+
+
 ]
