@@ -18,7 +18,7 @@
         console.log("access fucnction already");
         const send_data = {
             
-            // ให้น้องแบงเขียนโลจิกการส่งข้อมูล นะ
+            // ให้เขียนโลจิกการส่งข้อมูล นะ
             id:"",
         
             Volt_name:"222",

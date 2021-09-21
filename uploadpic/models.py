@@ -1,7 +1,5 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from django.db.models.fields import json
-from django.http import JsonResponse
 
 officerid = get_user_model()
 
