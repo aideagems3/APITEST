@@ -1,0 +1,5 @@
+Django_admin
+picfortrain
+user: admin
+pass: 1234
+
