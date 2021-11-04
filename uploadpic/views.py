@@ -1,3 +1,4 @@
+from inspect import ismemberdescriptor
 from django.http.response import JsonResponse
 from django.shortcuts import render
 import json
@@ -7,6 +8,10 @@ from rest_framework.views import APIView
 from uploadpic.models import Voltage,Equipment,Sub_equipment,Abnormal,Job_upload
 from uploadpic.serializers import VoltageSerializer,EquipmentSerializer,Sub_equipmentSerializer,AbnormalSerializer,Job_uploadSerializer
 from rest_framework import status
+
+import os
+from PIL import  Image
+from PIL.ExifTags import  TAGS
 
 # def test_json(request):
 #     data = list()
@@ -52,7 +57,6 @@ def reqresjson(request):
     
 def mypostapi(request):
     return render(request,"uploadpic/mypostapi.html")
-
 
 class VoltageList(APIView):
     def get(self,request):

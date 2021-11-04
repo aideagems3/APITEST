@@ -1,0 +1,10 @@
+^D:\GEMS#3\PROJECTUPLOADPIC\UPLOAD_API\API_PICFORTRAIN\PICWITHMODEL\DARKNET\BUILD\CMAKEFILES\48265305BD3C4B1C48291D456A03F955\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

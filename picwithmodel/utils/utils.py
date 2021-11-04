@@ -132,7 +132,7 @@ def detect_objects(model, img, iou_thresh, nms_thresh):
     return boxes, time_taken
 
 
-def load_coco_names(names):
+def load_custom_names(names):
     
     # Create an empty list to hold the object classes
     class_names = []

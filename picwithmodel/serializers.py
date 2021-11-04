@@ -8,7 +8,12 @@ import numpy as np
 from base64 import b64decode
 from PIL import Image
 
+
+
+
 class Base64ImageField(serializers.ImageField):
+
+    
 
     # # Convert Base64 to Image
     # def to_internal_value(self,data):
@@ -24,9 +29,10 @@ class Base64ImageField(serializers.ImageField):
     #     data = ContentFile(decoded_file,name=fname)
     #     return super().to_internal_value(data)
 
+    # # Convert Base64 to Image
     def to_internal_value(self,data):
-  
-        base64_data = data.split(',', 1)[1]
+    
+        base64_data = data.split(',',1)[1]
         decoded_file = base64.b64decode(base64_data)
         buff = io.BytesIO(decoded_file)
         fname = f"{str(uuid.uuid4())[:10]}.JPEG"
@@ -34,9 +40,8 @@ class Base64ImageField(serializers.ImageField):
         data = ImageFile(buff,name=fname)
         # print("data=",data)
         return super().to_internal_value(data)
-        
 
- 
+        
 
 class ImageformodelSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
@@ -44,8 +49,9 @@ class ImageformodelSerializer(serializers.Serializer):
     Objects = serializers.CharField()
     Success = serializers.BooleanField()
     Time = serializers.CharField()
-    # Boxespic = serializers.ImageField()
-    
+    Lat = serializers.CharField()
+    Lng = serializers.CharField()
+
     def create(self,validated_data):
         return Imageformodel.objects.create(**validated_data)
 

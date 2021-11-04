@@ -1,0 +1,22 @@
+﻿  Checking Build System
+  CMake is re-running because D:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'D:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet/CMakeLists.txt'
+    is newer than 'D:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  Darknet_VERSION: 0.2.5.4
+  -- vcpkg not found, toolchain not defined, using integrated libs on win32
+  -- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.17763.
+  -- PThreads4W_DLL_DIR: D:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet/3rdparty/pthreads/include/../bin
+  -- PThreads4W_DEBUG_DLL_DIR: D:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet/3rdparty/pthreads/include/../debug/bin
+  -- Configuring done
+  CMake Error in CMakeLists.txt:
+    OUTPUT containing a "#" is not allowed.
+  
+  
+  CMake Error in CMakeLists.txt:
+    OUTPUT containing a "#" is not allowed.
+  
+  
+  -- Generating done
+  CMake Generate step failed.  Build files cannot be regenerated correctly.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(241,5): error MSB8066: Custom build for 'D:\Gems#3\ProjectUploadPic\Upload_API\api_picfortrain\picwithmodel\darknet\build\CMakeFiles\48265305bd3c4b1c48291d456a03f955\generate.stamp.rule' exited with code 1.

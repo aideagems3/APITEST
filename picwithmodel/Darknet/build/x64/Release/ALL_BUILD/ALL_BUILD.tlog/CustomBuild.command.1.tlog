@@ -1,0 +1,10 @@
+^D:\GEMS#3\PROJECTUPLOADPIC\UPLOAD_API\API_PICFORTRAIN\PICWITHMODEL\DARKNET\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet" "-BD:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet/build" --check-stamp-file "D:/Gems#3/ProjectUploadPic/Upload_API/api_picfortrain/picwithmodel/darknet/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

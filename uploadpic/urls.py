@@ -8,6 +8,7 @@ urlpatterns = [
     # path('testjsondetail/<int:pk>', views.testjson_detail,name='testjson_detail'),
     path('reqresjson/', views.reqresjson,name='reqresjson'),
     path('mypostapi/', views.mypostapi,name='mypostapi'),
+    # path('gpsapi/', views.gpsapi,name='gpsapi'),
     path('voltage-list/', views.VoltageList.as_view(),name='voltage-list'),
     path('voltage-detail/<int:pk>', views.VoltageDetial.as_view(),name='voltage-detail'),
     path('equipment-list/', views.EquipmentList.as_view(),name='equipment-list'),
