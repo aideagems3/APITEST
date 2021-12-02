@@ -40,7 +40,7 @@ def Uploadpath(instance,filename):
 #         return objects, detection_time
 def detection(original_image):
     print("current path=",os.getcwd())
-    weights = './picwithmodel/darknet/weights/yolov3_insulator_train_6000.weights'
+    weights = './picwithmodel/darknet/weights/yolov3_insulator_train_4000.weights'
     # input = './MEDIA/Media/00003.jpg'
     datafile = './picwithmodel/darknet/data/insulator_data/insulator_data.data'
     cfg = './picwithmodel/darknet/cfg/yolov3_insulator_test.cfg'
@@ -67,8 +67,10 @@ def detection(original_image):
     # plot & save picture
     plt.axis("off")
     fig = plt.gcf()
-    fig.savefig("./picwithmodel/static/img/test.jpeg", dpi=100)
-    # show picture in website
+    fig.savefig("./picwithmodel/static/img/test.jpeg",dpi='figure',bbox_inches='tight')
+    
+    
+    # show picture here
     # plt.show()
 
     return detections,time_taken
@@ -135,19 +137,24 @@ class Imageformodel(models.Model):
         result,detection_time = detection(data)
         print("result=",result)
         print("detection_time=",detection_time)
-
+        
+        
         for key,percent,thebox in result:
             print("key=",key)
             print("percent=",percent)
             print("thebox=",thebox)
+
             if key in class_prob:
+                #append percent
                 if not isinstance(class_prob[key], list):
                     class_prob[key] = [class_prob[key]]
                 class_prob[key].append(percent)
-                # print("result1=",class_prob)
+                print("class_prob[key]=",class_prob[key])
+                print("result1=",class_prob)
             else:
+                #append percent
                 class_prob[key] = percent
-                # print("result2=",class_prob)
+                print("result2=",class_prob)
             
         print("fianlresult=",class_prob)
 
